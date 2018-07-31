@@ -1,0 +1,12 @@
+UI Display:
+How to Order things in the UI so that the correct item is always on top eg. when items from the inventory are being dragged into the game window they should always be on top
+
+Move between rooms:
+It should not be possible to move between rooms accidentally when dragging items from the inventory into the game.
+
+Fade out/in between rooms:
+
+Bedroom items and character appear in all rooms:
+Set all items/characters as children of the room so that they are disabled with the relevant room.
+This may require reattaching scripts and game objects as variables for scripts in any items/characters moved.
+

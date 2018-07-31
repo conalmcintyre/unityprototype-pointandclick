@@ -1,0 +1,12 @@
+Dialogue:
+Player Responses that affect the responses given by NPCs
+Difficulty setting that sets the language difficulty level
+
+Audio:
+System for Audio Dialogue
+Background Music: FMOD or Unity Audio setup
+Sound effects for collecting items and any actions.
+
+Inventory:
+Items interact with world - key opens lock, dig in garden with spade, pour water on plant.
+Line of text when items are used inappropriately.
