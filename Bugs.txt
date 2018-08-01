@@ -1,3 +1,7 @@
+Inventory Question Marks can be dragged into the gamescreen:
+Set the Inventory Game Objects so that they only become moveable when they display an item sprite.
+Possibly create a boolean that gets set to true when an item is picked up.
+
 UI Display:
 How to Order things in the UI so that the correct item is always on top eg. when items from the inventory are being dragged into the game window they should always be on top
 

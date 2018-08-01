@@ -52,6 +52,8 @@ public class InventoryManager : MonoBehaviour {
                 arrySlots[i].GetComponent<Transform>().localScale = new Vector3(2f, 2f, 1);
                 // update boxcollider size - the scale affects the boxcollider size
                 arrySlots[i].GetComponent<BoxCollider2D>().size = new Vector2(1f, 1f);
+                // set tag of inventory item
+                arrySlots[i].tag = "Sword";
                 break;            
         }
         Debug.Log("Index: " + i);
