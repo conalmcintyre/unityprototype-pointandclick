@@ -1,4 +1,5 @@
 Dialogue:
+Player Character 'Monologue'/Responses to NPCs 
 Player Responses that affect the responses given by NPCs
 Difficulty setting that sets the language difficulty level
 
@@ -10,3 +11,13 @@ Sound effects for collecting items and any actions.
 Inventory:
 Items interact with world - key opens lock, dig in garden with spade, pour water on plant.
 Line of text when items are used inappropriately.
+Inventory only holds 3 items
+
+Navigation:
+Stop player from moving into certain areas of the game without completing certain tasks eg. player cannot move into the garden without completing task for Lizard man
+
+
+Essentials for Level 1:
+Dig in Garden for Bone.
+Can't leave the house until the keys are given to Lizard man
+Expand Inventory - currently only holds 3 items

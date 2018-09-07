@@ -10,11 +10,12 @@ public class LevelController : MonoBehaviour {
     public string kitchen = "kitchen";
     public string toilet = "toilet";
     public string garden = "garden";
+    public string garage = "garage";
 
     //private NavigationController theNavigationController;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         // link to Navigation Controller Script
       //  theNavigationController = FindObjectOfType<NavigationController>();               
 	}
@@ -52,5 +53,12 @@ public class LevelController : MonoBehaviour {
     {
         Debug.Log(" Prepare Garden Method");
         Debug.Log("Leaving " + currentLocation);
-    }    
+    }
+
+    // These Methods Prepare the relevant Items for each Screen
+    public void PrepareGarageScreen()
+    {
+        Debug.Log(" Prepare Garage Method");
+        Debug.Log("Leaving " + currentLocation);
+    }
 }

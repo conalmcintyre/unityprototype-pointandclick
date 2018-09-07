@@ -12,6 +12,10 @@ public class InventoryManager : MonoBehaviour {
     public Sprite sword;
     public Sprite key;
     public Sprite apple;
+    public Sprite shovel;
+    public Sprite bone;
+    public Sprite floppyDisk;
+    public Sprite carKeys;
 
     // Question Marks to Update
     [SerializeField]
@@ -54,7 +58,41 @@ public class InventoryManager : MonoBehaviour {
                 arrySlots[i].GetComponent<BoxCollider2D>().size = new Vector2(1f, 1f);
                 // set tag of inventory item
                 arrySlots[i].tag = "Sword";
-                break;            
+                break;
+
+            // GARAGE ITEMS
+            case "Shovel":
+                // update sprite
+                arrySlots[i].GetComponent<SpriteRenderer>().sprite = shovel;
+                // update size of sprite
+                arrySlots[i].GetComponent<Transform>().localScale = new Vector3(0.3f, 0.3f, 1);
+                // update boxcollider size - the scale affects the boxcollider size
+                arrySlots[i].GetComponent<BoxCollider2D>().size = new Vector2(1f, 1f);
+                // set tag of inventory item
+                arrySlots[i].tag = "Shovel";
+                break;
+            // SITTINGROOM ITEMS
+            case "Floppy Disk":
+                // update sprite
+                arrySlots[i].GetComponent<SpriteRenderer>().sprite = floppyDisk;
+                // update size of sprite
+                arrySlots[i].GetComponent<Transform>().localScale = new Vector3(0.5f, 0.5f, 1);
+                // update boxcollider size - the scale affects the boxcollider size
+                arrySlots[i].GetComponent<BoxCollider2D>().size = new Vector2(1f, 1f);
+                // set tag of inventory item
+                arrySlots[i].tag = "Floppy Disk";
+                break;
+            // TOILET ITEMS
+            case "Car Keys":
+                // update sprite
+                arrySlots[i].GetComponent<SpriteRenderer>().sprite = carKeys;
+                // update size of sprite
+                arrySlots[i].GetComponent<Transform>().localScale = new Vector3(0.1f, 0.1f, 1);
+                // update boxcollider size - the scale affects the boxcollider size
+                arrySlots[i].GetComponent<BoxCollider2D>().size = new Vector2(1f, 1f);
+                // set tag of inventory item
+                arrySlots[i].tag = "Car Keys";
+                break;
         }
         Debug.Log("Index: " + i);
         i++;

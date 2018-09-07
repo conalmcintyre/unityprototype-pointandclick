@@ -10,6 +10,7 @@ public class NavigationController : MonoBehaviour {
     public GameObject garden;
     public GameObject sittingRoom;
     public GameObject toilet;
+    public GameObject garage;
       
     private LevelController theLevelController;
     //private CameraFades theCameraFades;
@@ -33,6 +34,7 @@ public class NavigationController : MonoBehaviour {
         toilet.SetActive(false);
         garden.SetActive(false);
         bedRoom.SetActive(false);
+        garage.SetActive(false);
     }
 
     public void goToBedroom()
@@ -130,7 +132,26 @@ public class NavigationController : MonoBehaviour {
 
         //theCameraFades.FadeInScreen();
     }
-    
+
+    public void goToGarage()
+    {
+        // Fade To Black
+        //theCameraFades.FadeToBlack();
+        // Deactivate All Items
+
+        // Activate Items
+        theLevelController.PrepareGarageScreen();
+        // Deactivate All Background Images
+        DeactivateAllBackgrounds();
+
+        garage.SetActive(true);
+
+        theLevelController.currentLocation = theLevelController.garage;
+        Debug.Log(theLevelController.currentLocation);
+
+        //theCameraFades.FadeInScreen();
+    }
+
 
     public void MoveLeft ()
     {
@@ -145,7 +166,9 @@ public class NavigationController : MonoBehaviour {
                 break;
             case "kitchen": goToGarden();
                 break;
-            default: goToGarden();
+            case "garden": goToGarage();
+                break;
+            default: goToGarage();
                 break;
         }
     }
@@ -154,6 +177,8 @@ public class NavigationController : MonoBehaviour {
     {
         switch (theLevelController.currentLocation)
         {
+            case "garage": goToGarden();
+                break;
             case "garden": goToKitchen();
                 break;
             case "kitchen": goToSittingRoom();
